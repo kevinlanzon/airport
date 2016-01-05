@@ -23,9 +23,7 @@ describe 'User stories' do
   it 'should not allow planes to land when airport is full' do
     airport = Airport.new(20)
     plane = Plane.new
-    20.times do
-      airport.land(plane)
-    end
+    20.times { airport.land(plane) }
     expect { airport.land(plane) }.to raise_error 'Cannot land plane: airport full'
   end
 end
