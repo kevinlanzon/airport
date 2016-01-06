@@ -17,7 +17,7 @@ describe Airport do
         it 'raises an error' do
           20.times do airport.land(plane)
           end
-          expect { airport.land(plane) }.to raise_error 'Cannot land plane: airport full'
+          expect { airport.land(plane) }.to raise_error 'Cannot land plane: airport is full'
         end
       end
     end
